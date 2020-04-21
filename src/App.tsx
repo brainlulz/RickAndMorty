@@ -8,7 +8,7 @@ import Home from './components/Home';
 
 function App() {
   return (
-    <Router>
+    <Router basename='/' >
       <div>
         <nav>
           <ul className={styles.navbar}>

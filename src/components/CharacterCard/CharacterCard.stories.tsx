@@ -1,9 +1,10 @@
 import { storiesOf } from '@storybook/react';
 import React from 'react';
+import CharacterInt from '../../interfaces/Character';
 
 import CharacterCard from '.';
 
-const data = {
+const data: CharacterInt = {
   id: 1,
   name: 'Rick Sanchez',
   status: 'Alive',
