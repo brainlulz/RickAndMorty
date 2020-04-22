@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/RickAndMorty/static/css/main.463c40b4.chunk.css",
-    "main.js": "/RickAndMorty/static/js/main.c7e173ce.chunk.js",
-    "main.js.map": "/RickAndMorty/static/js/main.c7e173ce.chunk.js.map",
+    "main.css": "/RickAndMorty/static/css/main.5d621aa4.chunk.css",
+    "main.js": "/RickAndMorty/static/js/main.f79c9cc6.chunk.js",
+    "main.js.map": "/RickAndMorty/static/js/main.f79c9cc6.chunk.js.map",
     "runtime-main.js": "/RickAndMorty/static/js/runtime-main.dce6728d.js",
     "runtime-main.js.map": "/RickAndMorty/static/js/runtime-main.dce6728d.js.map",
-    "static/js/2.67af607d.chunk.js": "/RickAndMorty/static/js/2.67af607d.chunk.js",
-    "static/js/2.67af607d.chunk.js.map": "/RickAndMorty/static/js/2.67af607d.chunk.js.map",
+    "static/js/2.19fa517e.chunk.js": "/RickAndMorty/static/js/2.19fa517e.chunk.js",
+    "static/js/2.19fa517e.chunk.js.map": "/RickAndMorty/static/js/2.19fa517e.chunk.js.map",
     "index.html": "/RickAndMorty/index.html",
-    "precache-manifest.312eceb6eea4ad57be5206a8899c97d3.js": "/RickAndMorty/precache-manifest.312eceb6eea4ad57be5206a8899c97d3.js",
+    "precache-manifest.098b6e80121c8b588d3970fda148edc0.js": "/RickAndMorty/precache-manifest.098b6e80121c8b588d3970fda148edc0.js",
     "service-worker.js": "/RickAndMorty/service-worker.js",
-    "static/css/main.463c40b4.chunk.css.map": "/RickAndMorty/static/css/main.463c40b4.chunk.css.map",
-    "static/js/2.67af607d.chunk.js.LICENSE.txt": "/RickAndMorty/static/js/2.67af607d.chunk.js.LICENSE.txt",
+    "static/css/main.5d621aa4.chunk.css.map": "/RickAndMorty/static/css/main.5d621aa4.chunk.css.map",
+    "static/js/2.19fa517e.chunk.js.LICENSE.txt": "/RickAndMorty/static/js/2.19fa517e.chunk.js.LICENSE.txt",
     "static/media/spinner.gif": "/RickAndMorty/static/media/spinner.df87091a.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.dce6728d.js",
-    "static/js/2.67af607d.chunk.js",
-    "static/css/main.463c40b4.chunk.css",
-    "static/js/main.c7e173ce.chunk.js"
+    "static/js/2.19fa517e.chunk.js",
+    "static/css/main.5d621aa4.chunk.css",
+    "static/js/main.f79c9cc6.chunk.js"
   ]
 }
