@@ -1,3 +1,62 @@
 .wrapper {
-  color: red;
+  color: #ffffff;
+  margin: 1rem;
+  padding: 0.5em;
+  background: #29323c;
+  max-width: 300px;
+  display: grid;
+  grid-template-rows: 300px 100px 280px;
+}
+
+.image {
+  width: 300px;
+  height: 300px;
+  border-radius: 5px 5px 15px 15px;
+  background: #4e4e50;
+}
+
+.name {
+  padding: 1rem;
+  font-size: 2rem;
+  max-width: 268px;
+  margin: 0;
+  text-align: center;
+}
+
+.species {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  margin: 10px 0;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.episode_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.episode {
+  padding: 3px;
+  display: inline-flex;
+  border: 1px solid white;
+  margin: 5px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  justify-content: center;
+  align-content: center;
+}
+
+.episode:hover {
+  background: #ffffff;
+  color: #29323c;
+  cursor: default;
 }

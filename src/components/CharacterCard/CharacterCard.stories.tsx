@@ -1,6 +1,8 @@
 import { storiesOf } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
+
 import React from 'react';
-import CharacterInt from '../../interfaces/Character';
+import CharacterInt from './Character.types';
 
 import CharacterCard from '.';
 
@@ -46,5 +48,5 @@ const data: CharacterInt = {
 };
 
 storiesOf('Character', module).add('Default', () => (
-  <CharacterCard data={data} />
+  <CharacterCard data={data} fetchBySpecies={action('fetchBySpecies')} />
 ));
