@@ -17,7 +17,7 @@ storiesOf('Search', module).add('Default', () => {
     <div style={{ backgroundColor: 'grey', padding: '3rem' }}>
       <Search
         handleCharacterSearch={changeSearch}
-        fetchData={action('fetchData')}
+        resetData={action('resetData')}
         value={searchValue}
       />
     </div>

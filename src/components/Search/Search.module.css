@@ -45,6 +45,11 @@
   background: #29323c;
 }
 
+.button:disabled {
+  background: #757575;
+  border: 0;
+}
+
 .species {
   font-size: 0.875rem;
   margin: 0;

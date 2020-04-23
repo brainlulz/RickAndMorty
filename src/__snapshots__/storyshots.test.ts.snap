@@ -39,8 +39,8 @@ exports[`Storyshots Character Default 1`] = `
     >
       <p
         className="episode"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+        onPointerEnter={[Function]}
+        onPointerLeave={[Function]}
       >
         
         
@@ -87,8 +87,8 @@ exports[`Storyshots Character Default 1`] = `
       </p>
       <p
         className="episode"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+        onPointerEnter={[Function]}
+        onPointerLeave={[Function]}
       >
         
         
@@ -135,8 +135,195 @@ exports[`Storyshots Character Default 1`] = `
       </p>
       <p
         className="episode"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
+        onPointerEnter={[Function]}
+        onPointerLeave={[Function]}
+      >
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        3
+        
+      </p>
+      
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Character Recommendend 1`] = `
+<div
+  className="wrapper recommended"
+>
+  <img
+    alt="Rick Sanchez"
+    className="image"
+    src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+  />
+  <p
+    className="name"
+  >
+    Rick Sanchez
+  </p>
+  <div>
+    <div
+      className="species"
+      onClick={[Function]}
+    >
+      <p
+        className="title"
+      >
+        Species:
+      </p>
+      <p>
+         
+        Human
+      </p>
+    </div>
+    <p
+      className="title"
+    >
+      Episodes:
+    </p>
+    <div
+      className="episode_wrapper"
+    >
+      <p
+        className="episode"
+        onPointerEnter={[Function]}
+        onPointerLeave={[Function]}
+      >
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        1
+        
+      </p>
+      <p
+        className="episode"
+        onPointerEnter={[Function]}
+        onPointerLeave={[Function]}
+      >
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        2
+        
+      </p>
+      <p
+        className="episode"
+        onPointerEnter={[Function]}
+        onPointerLeave={[Function]}
       >
         
         
@@ -263,6 +450,7 @@ exports[`Storyshots Search Default 1`] = `
       >
         <button
           className="button"
+          disabled={true}
           onClick={[Function]}
           type="reset"
         >

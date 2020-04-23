@@ -31,6 +31,14 @@ const data: CharacterInt = {
   created: '2017-11-04T18:48:46.250Z',
 };
 
-storiesOf('Character', module).add('Default', () => (
-  <CharacterCard data={data} fetchBySpecies={action('fetchBySpecies')} />
-));
+storiesOf('Character', module)
+  .add('Default', () => (
+    <CharacterCard data={data} fetchBySpecies={action('fetchBySpecies')} />
+  ))
+  .add('Recommendend', () => (
+    <CharacterCard
+      data={data}
+      fetchBySpecies={action('fetchBySpecies')}
+      recommended
+    />
+  ));

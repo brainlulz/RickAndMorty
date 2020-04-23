@@ -35,6 +35,7 @@ exports[`renders learn react link 1`] = `
           >
             <button
               class="button"
+              disabled=""
               type="reset"
             >
               Search

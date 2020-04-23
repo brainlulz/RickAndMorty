@@ -1,3 +1,4 @@
+import cx from 'classnames';
 import React, { useCallback, useState } from 'react';
 
 import Episode from '../Episode';
@@ -7,9 +8,14 @@ import styles from './CharacterCard.module.css';
 interface Props {
   data: CharacterInt;
   fetchBySpecies: (type: string) => void;
+  recommended?: boolean;
 }
 
-export default function CharacterCard({ data, fetchBySpecies }: Props) {
+export default function CharacterCard({
+  data,
+  fetchBySpecies,
+  recommended = false,
+}: Props) {
   const [episodeURL, setEpisodeURL] = useState('');
 
   function showEpisode(url: string) {
@@ -21,7 +27,7 @@ export default function CharacterCard({ data, fetchBySpecies }: Props) {
   }, []);
 
   return (
-    <div className={styles.wrapper}>
+    <div className={cx(styles.wrapper, { [styles.recommended]: recommended })}>
       <img src={data.image} alt={data.name} className={styles.image} />
       <p className={styles.name}>{data.name}</p>
       <div>

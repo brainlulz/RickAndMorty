@@ -8,6 +8,12 @@
   grid-template-rows: 300px 110px 280px;
 }
 
+.recommended {
+  background: rgba(0, 0, 0, 0)
+    linear-gradient(to top, rgb(195, 20, 50), rgb(36, 11, 54)) repeat scroll 0%
+    0%;
+}
+
 .image {
   width: 300px;
   height: 300px;

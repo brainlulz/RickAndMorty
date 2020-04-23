@@ -4,13 +4,13 @@ import styles from './Search.module.css';
 
 interface Props {
   handleCharacterSearch: (search: string) => void;
-  fetchData: () => void;
+  resetData: () => void;
   value: string;
 }
 
 export default function Search({
   handleCharacterSearch,
-  fetchData,
+  resetData,
   value,
 }: Props) {
   const [currentValue, setCurrentValue] = useState('');
@@ -26,7 +26,7 @@ export default function Search({
 
   const onReset = (event: React.FormEvent) => {
     event.preventDefault();
-    fetchData();
+    resetData();
   };
 
   const onChange = useCallback((e) => {
@@ -54,7 +54,7 @@ export default function Search({
             placeholder="Eg: Beebo "
           />
           <div className={styles.buttons_wrapper}>
-            <button type="reset" onClick={onSubmit} className={styles.button}>
+            <button type="reset" onClick={onSubmit} className={styles.button} disabled={currentValue === ''}>
               Search
             </button>
             <button type="reset" onClick={onReset} className={styles.button}>
