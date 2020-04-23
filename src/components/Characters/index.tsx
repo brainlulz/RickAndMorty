@@ -71,7 +71,6 @@ export default function Characters() {
         // or it's a new research with a different species
         if (!data.error) {
           const firstCharacterSpecies = data.results[0].species;
-          console.log(firstCharacterSpecies, recommendendSpecies);
           if (
             recommendendSpecies === '' ||
             firstCharacterSpecies === recommendendSpecies ||
@@ -110,10 +109,10 @@ export default function Characters() {
   };
 
   function changePage(pageNumber: number) {
-    if (currentName) {
-      fetchByCharacterName(currentName, pageNumber);
-    } else if (speciesSearch) {
+    if (speciesSearch) {
       fetchBySpecies(speciesSearch, pageNumber);
+    } else if (currentName) {
+      fetchByCharacterName(currentName, pageNumber);
     } else {
       fetchData(pageNumber);
     }
