@@ -5,7 +5,7 @@
   background: #29323c;
   max-width: 300px;
   display: grid;
-  grid-template-rows: 300px 100px 280px;
+  grid-template-rows: 300px 110px 280px;
 }
 
 .image {
@@ -27,6 +27,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: default;
+}
+
+.species:hover {
+  color: #29323c;
+  background: #ffffff;
 }
 
 .title {

@@ -1,7 +1,7 @@
+import cx from 'classnames';
 import React from 'react';
 
 import styles from './Pagination.module.css';
-import cx from 'classnames';
 
 interface Pagination {
   pageCount: number;
@@ -18,7 +18,12 @@ export default function Pagination({
     <div className={styles.pagination}>
       {currentPage > 1 && (
         <>
-          <button onClick={() => goToPage(currentPage - 1)} className={styles.prev_next}>Previous</button>
+          <button
+            onClick={() => goToPage(currentPage - 1)}
+            className={styles.prev_next}
+          >
+            Previous
+          </button>
           <button
             onClick={() => goToPage(currentPage - 1)}
             className={styles.pages}
@@ -36,7 +41,12 @@ export default function Pagination({
           >
             {currentPage + 1}
           </button>
-          <button onClick={() => goToPage(currentPage + 1)} className={styles.prev_next}>Next</button>
+          <button
+            onClick={() => goToPage(currentPage + 1)}
+            className={styles.prev_next}
+          >
+            Next
+          </button>
         </>
       )}
     </div>

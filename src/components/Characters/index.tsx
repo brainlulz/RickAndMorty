@@ -1,12 +1,14 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import getCharacters from '../../services/getCharacters';
+import React, { useCallback, useEffect, useState } from 'react';
+
+import meeseeks from '../../assets/meeseeks.png';
+import spinner from '../../assets/spinner.gif';
 import getByName from '../../services/getByName';
 import getBySpecies from '../../services/getBySpecies';
+import getCharacters from '../../services/getCharacters';
 import CharacterCard from '../CharacterCard';
-import Search from '../Search';
-import spinner from '../../assets/spinner.gif';
-import styles from './Characters.module.css';
 import Pagination from '../Pagination';
+import Search from '../Search';
+import styles from './Characters.module.css';
 
 export default function Characters() {
   const [characters, setCharacters] = useState([]);
@@ -14,6 +16,7 @@ export default function Characters() {
   const [currentPage, setCurrentPage] = useState(1);
   const [fetching, setFetching] = useState(true);
   const [currentValue, setCurrentValue] = useState('');
+  const [speciesSearch, setSpeciesSearch] = useState('');
   const [error, setError] = useState(null);
 
   function handleResponse(response: {
@@ -21,7 +24,6 @@ export default function Characters() {
     results: React.SetStateAction<never[]>;
     info: { pages: React.SetStateAction<number> };
   }) {
-    console.log("response",response)
     if (response.error) {
       setError(response.error);
       setCharacters([]);
@@ -30,6 +32,7 @@ export default function Characters() {
       setPageCount(response.info.pages);
     }
     setFetching(false);
+    setSpeciesSearch('');
   }
 
   const fetchData = useCallback(async (selected = 1) => {
@@ -38,54 +41,63 @@ export default function Characters() {
     setError(null);
     setCurrentPage(selected);
 
-    console.log(selected)
-
     const data = await getCharacters(selected);
     handleResponse(data);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
+  const fetchByCharacterName = useCallback(
+    (name: string, page?: number) => {
+      if (currentValue === name && page === currentPage) return;
+
+      setFetching(true);
+      setCurrentValue(name);
+      setError(null);
+
+      const fetchCharacter = async () => {
+        const data = await getByName(name, page);
+        handleResponse(data);
+      };
+
+      fetchCharacter();
+    },
+    [currentPage, currentValue]
+  );
+
   // fetch by character name
-  const handleCharacterSearch = useCallback((name: string) => {
-
-    console.log("NAME", name)
-    setFetching(true);
-    setCurrentValue(name);
-
-    const fetchCharacter = async () => {
-      const data = await getByName(name);
-      handleResponse(data);
-    };
-
-    fetchCharacter();
-  }, []);
 
   // fetch by characters by species
-  const fetchBySpecies = (type: string) => {
+  const fetchBySpecies = (type: string, page?: number) => {
+    if (speciesSearch === type && page === currentPage) return;
     setFetching(true);
 
     const fetchCharacter = async () => {
-      const data = await getBySpecies(type);
+      const data = await getBySpecies(type, page);
       handleResponse(data);
+      setSpeciesSearch(type);
     };
 
     fetchCharacter();
   };
 
   function changePage(pageNumber: number) {
+    if (currentValue) {
+      fetchByCharacterName(currentValue, pageNumber);
+    } else if (speciesSearch) {
+      fetchBySpecies(speciesSearch, pageNumber);
+    } else {
+      fetchData(pageNumber);
+    }
     setCurrentPage(pageNumber);
-    fetchData(pageNumber);
   }
+
+  // LIFE CYCLE
 
   useEffect(() => {
     fetchData();
   }, [fetchData]);
 
   // RENDERS
-
-  function handleError() {
-    return <div>{error}</div>;
-  }
 
   function handleFetch() {
     return (
@@ -96,31 +108,46 @@ export default function Characters() {
   }
 
   function handleSearch() {
-    return (
-      <>
-        <Search
-          value={currentValue}
-          handleCharacterSearch={handleCharacterSearch}
-          fetchData={fetchData}
-        />
-        {error && handleError()}
-        <div className={styles.characters_wrapper}>
-          {characters.map((character, i) => (
-            <CharacterCard
-              key={i}
-              data={character}
-              fetchBySpecies={fetchBySpecies}
-            />
-          ))}
+    if (error) {
+      return (
+        <div className={styles.error}>
+          <img src={meeseeks} alt="mr meeseeks" />
+          Ooops: {error}
         </div>
-        <Pagination
-          currentPage={currentPage}
-          pageCount={pageCount}
-          goToPage={changePage}
-        />
-      </>
-    );
+      );
+    } else {
+      return (
+        <>
+          {speciesSearch.length > 0 && (
+            <p className={styles.searched}>Searched By: {speciesSearch}</p>
+          )}
+          <div className={styles.characters_wrapper}>
+            {characters.map((character, i) => (
+              <CharacterCard
+                key={i}
+                data={character}
+                fetchBySpecies={fetchBySpecies}
+              />
+            ))}
+          </div>
+          <Pagination
+            currentPage={currentPage}
+            pageCount={pageCount}
+            goToPage={changePage}
+          />
+        </>
+      );
+    }
   }
 
-  return <div>{fetching ? handleFetch() : handleSearch()}</div>;
+  return (
+    <div>
+      <Search
+        value={currentValue}
+        handleCharacterSearch={fetchByCharacterName}
+        fetchData={fetchData}
+      />
+      {fetching ? handleFetch() : handleSearch()}
+    </div>
+  );
 }

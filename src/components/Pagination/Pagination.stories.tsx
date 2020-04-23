@@ -1,8 +1,9 @@
-import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import Pagination from '.';
 import { useState } from '@storybook/addons';
+import { storiesOf } from '@storybook/react';
+
+import Pagination from './';
 
 storiesOf('Pagination', module).add('Default', () => {
   const [currentPage, setCurrentPage] = useState(1);

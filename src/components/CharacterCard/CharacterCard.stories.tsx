@@ -1,10 +1,10 @@
-import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-
 import React from 'react';
-import CharacterInt from './Character.types';
 
-import CharacterCard from '.';
+import { action } from '@storybook/addon-actions';
+import { storiesOf } from '@storybook/react';
+
+import CharacterCard from './';
+import CharacterInt from './Character.types';
 
 const data: CharacterInt = {
   id: 1,
@@ -26,22 +26,6 @@ const data: CharacterInt = {
     'https://rickandmortyapi.com/api/episode/1',
     'https://rickandmortyapi.com/api/episode/2',
     'https://rickandmortyapi.com/api/episode/3',
-    'https://rickandmortyapi.com/api/episode/4',
-    'https://rickandmortyapi.com/api/episode/5',
-    'https://rickandmortyapi.com/api/episode/6',
-    'https://rickandmortyapi.com/api/episode/7',
-    'https://rickandmortyapi.com/api/episode/8',
-    'https://rickandmortyapi.com/api/episode/9',
-    'https://rickandmortyapi.com/api/episode/10',
-    'https://rickandmortyapi.com/api/episode/11',
-    'https://rickandmortyapi.com/api/episode/12',
-    'https://rickandmortyapi.com/api/episode/13',
-    'https://rickandmortyapi.com/api/episode/14',
-    'https://rickandmortyapi.com/api/episode/15',
-    'https://rickandmortyapi.com/api/episode/16',
-    'https://rickandmortyapi.com/api/episode/17',
-    'https://rickandmortyapi.com/api/episode/18',
-    'https://rickandmortyapi.com/api/episode/19',
   ],
   url: 'https://rickandmortyapi.com/api/character/1',
   created: '2017-11-04T18:48:46.250Z',

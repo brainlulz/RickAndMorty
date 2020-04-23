@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Search Default 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "grey",
+      "padding": "3rem",
+    }
+  }
+>
+  <form
+    className="wrapper"
+    onReset={[Function]}
+    onSubmit={[Function]}
+  >
+    <label
+      className="label"
+      htmlFor="character"
+    >
+      Search a character
+    </label>
+    <p
+      className="species"
+    >
+      Or click on a character's species to find same ones
+    </p>
+    <div
+      className="container"
+    >
+      <input
+        aria-label="character"
+        className="input"
+        data-testid="input"
+        id="character"
+        onChange={[Function]}
+        placeholder="Eg: Beebo "
+        type="text"
+        value=""
+      />
+      <div
+        className="buttons_wrapper"
+      >
+        <button
+          className="button"
+          onClick={[Function]}
+          type="reset"
+        >
+          Search
+        </button>
+        <button
+          className="button"
+          onClick={[Function]}
+          type="reset"
+        >
+          Reset search or filter
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+`;

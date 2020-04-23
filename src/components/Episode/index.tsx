@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import getEpisode from '../../services/getEpisode';
-
 import styles from './Episode.module.css';
 
 export default function Episode({ url }: { url: string }) {

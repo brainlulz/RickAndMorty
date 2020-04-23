@@ -1,0 +1,282 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Character Default 1`] = `
+<div
+  className="wrapper"
+>
+  <img
+    alt="Rick Sanchez"
+    className="image"
+    src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+  />
+  <p
+    className="name"
+  >
+    Rick Sanchez
+  </p>
+  <div>
+    <div
+      className="species"
+      onClick={[Function]}
+    >
+      <p
+        className="title"
+      >
+        Species:
+      </p>
+      <p>
+         
+        Human
+      </p>
+    </div>
+    <p
+      className="title"
+    >
+      Episodes:
+    </p>
+    <div
+      className="episode_wrapper"
+    >
+      <p
+        className="episode"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        1
+        
+      </p>
+      <p
+        className="episode"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        2
+        
+      </p>
+      <p
+        className="episode"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        3
+        
+      </p>
+      
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Pagination Default 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "grey",
+      "padding": "3rem",
+    }
+  }
+>
+  <div
+    className="pagination"
+  >
+    <p
+      className="pages active"
+    >
+      1
+    </p>
+    <button
+      className="pages"
+      onClick={[Function]}
+    >
+      2
+    </button>
+    <button
+      className="prev_next"
+      onClick={[Function]}
+    >
+      Next
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Search Default 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "grey",
+      "padding": "3rem",
+    }
+  }
+>
+  <form
+    className="wrapper"
+    onReset={[Function]}
+    onSubmit={[Function]}
+  >
+    <label
+      className="label"
+      htmlFor="character"
+    >
+      Search a character
+    </label>
+    <p
+      className="species"
+    >
+      Or click on a character's species to find same ones
+    </p>
+    <div
+      className="container"
+    >
+      <input
+        aria-label="character"
+        className="input"
+        data-testid="input"
+        id="character"
+        onChange={[Function]}
+        placeholder="Eg: Beebo "
+        type="text"
+        value=""
+      />
+      <div
+        className="buttons_wrapper"
+      >
+        <button
+          className="button"
+          onClick={[Function]}
+          type="reset"
+        >
+          Search
+        </button>
+        <button
+          className="button"
+          onClick={[Function]}
+          type="reset"
+        >
+          Reset search or filter
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+`;

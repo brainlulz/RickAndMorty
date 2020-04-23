@@ -46,11 +46,13 @@
   "devDependencies": {
     "@storybook/addon-actions": "^5.3.18",
     "@storybook/addon-links": "^5.3.18",
+    "@storybook/addon-storyshots": "^5.3.18",
     "@storybook/addons": "^5.3.18",
     "@storybook/preset-create-react-app": "^2.1.1",
     "@storybook/react": "^5.3.18",
     "@types/classnames": "^2.2.10",
     "@types/react-router-dom": "^5.1.4",
-    "gh-pages": "^2.2.0"
+    "gh-pages": "^2.2.0",
+    "react-test-renderer": "^16.13.1"
   }
 }

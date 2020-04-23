@@ -1,3 +1,52 @@
 .wrapper {
-  color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.buttons_wrapper {
+  display: flex;
+}
+
+.label {
+  font-size: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.input {
+  margin: 1rem;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #29323c;
+  background: #29323c;
+  color: #ffffff;
+}
+
+.button {
+  margin: 1rem;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #29323c;
+  background: transparent;
+  color: #ffffff;
+}
+
+.button:hover {
+  border: 1px solid #29323c;
+  background: #29323c;
+}
+
+.species {
+  font-size: 0.875rem;
+  margin: 0;
+  text-align: center;
 }

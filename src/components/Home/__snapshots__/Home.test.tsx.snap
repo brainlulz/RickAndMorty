@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders learn react link 1`] = `
+<div>
+  <div>
+    <div>
+      <form
+        class="wrapper"
+      >
+        <label
+          class="label"
+          for="character"
+        >
+          Search a character
+        </label>
+        <p
+          class="species"
+        >
+          Or click on a character's species to find same ones
+        </p>
+        <div
+          class="container"
+        >
+          <input
+            aria-label="character"
+            class="input"
+            data-testid="input"
+            id="character"
+            placeholder="Eg: Beebo "
+            type="text"
+            value=""
+          />
+          <div
+            class="buttons_wrapper"
+          >
+            <button
+              class="button"
+              type="reset"
+            >
+              Search
+            </button>
+            <button
+              class="button"
+              type="reset"
+            >
+              Reset search or filter
+            </button>
+          </div>
+        </div>
+      </form>
+      <div
+        class="spinner"
+      >
+        <img
+          alt="loading"
+          src="spinner.gif"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
