@@ -37,8 +37,8 @@ export default function CharacterCard({ data, fetchBySpecies }: Props) {
           {data.episode.map((episode, i) => (
             <p
               key={i}
-              onMouseEnter={() => showEpisode(episode)}
-              onMouseLeave={clearEpisode}
+              onPointerEnter={() => showEpisode(episode)}
+              onPointerLeave={clearEpisode}
               className={styles.episode}
             >
               {episode.match(/\d*/gm)}
