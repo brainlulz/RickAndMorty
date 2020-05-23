@@ -9,7 +9,7 @@ You’ll need to have [Node >= 8.10 and npm >= 5.6](https://nodejs.org/en/) on y
 ## Installation
 
 Clone the project:  
-`git clone https://github.com/brainlulz/RickAndMorty.git`
+`git clone https://github.com/imalexlab/RickAndMorty.git`
 
 Then, move into the folder and install the dependencies:  
 `cd RickAndMorty`  
