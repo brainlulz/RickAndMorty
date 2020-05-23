@@ -1,6 +1,6 @@
 # Rick and Morty React App
 
-You can see the App deployed on Github Pages here: <https://brainlulz.github.io/RickAndMorty/>
+You can see the App deployed on Github Pages here: <https://imalexlab.github.io/RickAndMorty/>
 
 ## Prerequisites
 
